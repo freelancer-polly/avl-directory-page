@@ -24,7 +24,15 @@
                 <input class="input" type="text" placeholder="">
               </div>
               <div class="control searchBtn">
-                <a class="button is-info search-button-green"><i class="fa fa-search"></i></a>
+                <a class="button is-info search-button-green">Search</a>
+              </div>
+            </div>
+            <div class="field has-addons has-tags">
+              <div class="control searchbox">
+                <input class="input" type="text" placeholder="">
+              </div>
+              <div class="control searchBtn">
+                <a class="button is-info addTags">Add Tags</a>
               </div>
             </div>
             <div class="spacer-1"></div>
@@ -41,7 +49,7 @@
           </div>
         </div>
         <div class="spacer-2"></div>
-        <div class="columns" v-for="profileChunk in profiles" :key="profileChunk.name">
+        <div class="columns cards" v-for="profileChunk in profiles" :key="profileChunk.name">
           <div class="column" v-for="profile in profileChunk" :key="profile.name">
             <div class="white-box">
                 <div class="is-pulled-left">
@@ -130,10 +138,10 @@ ul.menu-list li {
   height: 3rem;
 }
 .spacer-2 {
-  height: 2rem;
+  height: 1rem;
 }
 .spacer-1 {
-  height: 1rem;
+  height: 0.5rem;
 }
 .white-box {
   background: #fff;
@@ -183,11 +191,10 @@ ul.profile-skills li {
 .searchBtn {
   margin-left:10px;  
 }
-.searchBtn .is-info {
-  background-color:#45f442!important;
-}
 .search-button-green {
   width: 100px;
+  height:1.77em;
+  background-color:#5cf441!important;
 }
 .menu-list {
   text-align : center;
@@ -204,5 +211,27 @@ ul.profile-skills li {
 .fa, .far, .fas {
   font-family: Font Awesome\ 5 Free;
   display: inline-block
+}
+.switch[type="checkbox"].is-info + label::before{
+  height : 1.2rem;
+}
+.switch[type="checkbox"].is-info + label::after{
+  width:0.7rem;
+  height:0.7rem
+}
+.switch[type="checkbox"] + label {
+  padding-top:0px;
+}
+.addTags {
+  font-size:0.8rem;
+}
+.has-tags .searchbox {
+  width:55%;
+}
+ .searchbox .input {
+  height:1.8rem;
+}
+.cards .column {
+  padding:0.35rem;
 }
 </style>
